@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <template id="report_invoice_document_inherited" inherit_id="account.report_invoice_document">
+        <xpath expr="//p[@t-if='o.comment']" position="before">
+            <t t-if="o.payment_ids">
+                <br/>
+                <p><strong>Versements déjà effectués:</strong></p>
+            <table class="table table-condensed" style="width:60%">
+                <thead>
+                     <tr>
+                        <th>Règlement</th>
+                        <th class="text-right">Montant</th>
+                        <th class="text-right">Type</th>
+			<th class="text-right">Num</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="o.payment_ids" t-as="pmnt_line">
+                        <tr>
+                            <td><span t-field="pmnt_line.payment_date"/></td>
+                            <td class="text-right">
+                            <span t-field="pmnt_line.amount" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: pmnt_line.currency_id}"/>
+                            </td>
+                            <td class="text-right"><span t-field="pmnt_line.journal_id"/></td>
+                            <td class="text-right"><span t-field="pmnt_line.communication"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+            </t>
+
+        </xpath>
+
+    </template>
+    </data>
+</odoo>

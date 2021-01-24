@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record model="ir.ui.view" id="project_project_display_date_start.project_form">
+      <field name="name">project.date.start</field>
+      <field name="model">project.project</field>
+      <field name="inherit_id" ref="project.edit_project"/>
+      <field name="arch" type="xml">
+          <field name="user_id" position="before">
+             <field name="date_start" required="1"/>
+          </field>
+      </field>
+    </record>
+    </data>
+</odoo>

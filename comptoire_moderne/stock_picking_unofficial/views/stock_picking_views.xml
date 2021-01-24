@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="stock_view_picking_form_inherited">
+        <field name="name">unoficial.stock.picking</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <field name="min_date" position="after">
+                <field name="unoffcial_bl" string="BC"/>
+            </field>
+        </field>
+    </record>
+  </data>
+</odoo>

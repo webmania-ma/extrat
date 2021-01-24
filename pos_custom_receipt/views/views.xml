@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets" inherit_id="point_of_sale.assets">
+      <xpath expr="." position="inside">
+          <link rel="stylesheet" href="/pos_custom_receipt/static/src/css/pos.css"/>
+      </xpath>
+    </template>
+    <record model="ir.ui.view" id="view_pos_config_form">
+        <field name="name">pos.config.form.view</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_config_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Receipt configuration" name="receipt_config" col="4">
+                    <field name='multi_receipt_count'/>
+                    <field name='receipt_width'/>
+                    <field name='allow_uom'/>
+                    <field name='allow_currency'/>
+                    <field name='receipt_padding'/>
+                    <field name='receipt_font_size'/>
+                    <field name='receipt_watermark'/>
+                    <field name='image' widget="image" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

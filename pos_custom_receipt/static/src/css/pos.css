@@ -1,0 +1,9 @@
+#bg-text
+{
+    opacity: 0.2;
+    position: absolute;
+    color:lightgrey;
+    font-size:26px;
+    transform:rotate(300deg);
+    -webkit-transform:rotate(300deg);
+}
