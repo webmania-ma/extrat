@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="importassa_form_view">
+            <field name="name">importassa.form</field>
+            <field name="model">import_account_move_csv.import_compt</field>
+            <field name="arch" type="xml">
+                <form string="Import Account Move Lines">
+                    <header>
+                        <button string="Import" type="object" name="importer_fichier" class="oe_highlight" attrs="{'invisible':[('dateImport','!=',False)]}" />
+                    </header>
+                    <group>
+                        <field name="nom"/>
+                        <field name="fichier" widget="binary" attrs="{'readonly':[('dateImport','!=',False)]}"/>
+                        <field name="message_erreur"/>
+                        <field name="dateImport"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="comp_list_view" model="ir.ui.view">
+            <field name="name">compp.list.view</field>
+            <field name="model">import_account_move_csv.import_compt</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nom"/>
+                    <field name="fichier" widget="binary"/>
+                    <field name="dateImport"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="import_comp_assa" model="ir.actions.act_window">
+            <field name="name">Import Account Move lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">import_account_move_csv.import_compt</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="comp_list_view"/>
+        </record>
+
+        <menuitem name="Import Account Move Lines" id="import_account_move_csv.menu_root" sequence="551"
+                  action="import_comp_assa" groups="account.group_account_manager" web_icon="import_account_move_csv,static/description/icon_blank.png"/>
+    </data>
+</odoo>

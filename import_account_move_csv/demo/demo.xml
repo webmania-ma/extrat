@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_journal_fact" model="account.journal">
+        <field name='name'>FACTU</field>
+        <field name='type'>sale</field>
+        <field name='code'>FACTU</field>
+    </record>
+
+    <record id="demo_account_1" model="account.account">
+        <field name="code">613650</field>
+        <field name="name">Test1</field>
+        <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+    </record>
+    <record id="demo_account_2" model="account.account">
+        <field name="code">34552000</field>
+        <field name="name">Test2</field>
+        <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+    </record>
+    <record id="demo_account_3" model="account.account">
+        <field name="code">44880200</field>
+        <field name="name">Test3</field>
+        <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+    </record>
+    <record id="demo_account_4" model="account.account">
+        <field name="code">613160</field>
+        <field name="name">Test4</field>
+        <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+    </record>
+    <record id="demo_account_5" model="account.account">
+        <field name="code">44880700</field>
+        <field name="name">Test5</field>
+        <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+    </record>
+</odoo>

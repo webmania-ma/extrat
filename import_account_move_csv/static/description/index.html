@@ -1,0 +1,39 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Imports account move from csv file</h2>
+        <div class="text-justify">
+            <p class="oe_mt32">
+                This modules allows to import account move lines from a csv file<br/>
+                (the separator has to be the comma, and the delimiter has to be the double quote)<br/>
+                There must be no blank field.<br/>
+                Each line of the csv represent and account.move.line<br/>
+                The first line must be:<br/>
+                DATE	JAL	COMPTE	PCE	LIBELLE	DEBIT	CREDIT<br/>
+                For each line:<br/>
+                <ul>
+                    <li>
+                        DATE is the date in DD/MM/YYYY format
+                    </li>
+                    <li>
+                        JAL is the code of the journal
+                    </li>
+                    <li>
+                        COMPTE is the account.account number
+                    </li>
+                    <li>
+                        PCE is a key per account move, to identify to which account move and account move line belongs
+                    </li>
+                    <li>
+                        LIBELLE is the name of the line
+                    </li>
+                    <li>
+                        DEBIT is the amount of debit
+                    </li>
+                    <li>
+                        CREDIT is the amount of credit
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</section>

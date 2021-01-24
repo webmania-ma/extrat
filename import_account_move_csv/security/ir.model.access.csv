@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_import_account_move_csv_import_compt,access_import_account_move_csv_import_compt,model_import_account_move_csv_import_compt,account.group_account_manager,1,1,1,1
